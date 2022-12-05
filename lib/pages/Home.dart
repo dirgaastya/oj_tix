@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:oj_tix/pages/Login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
@@ -57,7 +56,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            _navigateLoginPage(context);
+                            Navigator.pushNamed(context, '/login');
                           },
                           child: Text(
                             "SIGN IN",
@@ -83,7 +82,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            // _navigateSiginPage(context);
+                            Navigator.pushNamed(context, '/register');
                           },
                           child: const Text(
                             "SIGN UP",
@@ -110,14 +109,4 @@ class Home extends StatelessWidget {
           )),
     );
   }
-
-  void _navigateLoginPage(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => const Login()));
-  }
-
-  // void _navigateSiginPage(BuildContext context) {
-  //   Navigator.of(context)
-  //       .push(MaterialPageRoute(builder: (context) => SiginPage()));
-  // }
 }

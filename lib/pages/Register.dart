@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +74,30 @@ class Login extends StatelessWidget {
                                       borderSide: BorderSide(
                                           color: Color(0xFFB3CAFF), width: 1),
                                       borderRadius: BorderRadius.circular(15)),
+                                  labelText: 'Name'),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Row(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: TextField(
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(15)),
+                                      borderSide:
+                                          BorderSide(color: Color(0xFF407BFF))),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Color(0xFFB3CAFF), width: 1),
+                                      borderRadius: BorderRadius.circular(15)),
                                   labelText: 'Email'),
                             ),
                           ),
@@ -105,6 +129,32 @@ class Login extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 16),
+                      Row(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            child: TextField(
+                              obscureText: true,
+                              enableSuggestions: false,
+                              autocorrect: false,
+                              decoration: InputDecoration(
+                                  fillColor: Colors.white,
+                                  filled: true,
+                                  focusedBorder: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(15)),
+                                      borderSide:
+                                          BorderSide(color: Color(0xFF407BFF))),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Color(0xFFB3CAFF), width: 1),
+                                      borderRadius: BorderRadius.circular(15)),
+                                  labelText: 'Confirm Password'),
+                            ),
+                          ),
+                        ],
+                      ),
                       SizedBox(
                         height: 18,
                       ),
@@ -122,7 +172,7 @@ class Login extends StatelessWidget {
                             // _navigateMainPage(context);
                           },
                           child: Text(
-                            "SIGN IN",
+                            "SIGN UP",
                             style: TextStyle(
                                 color: Color(0xffffffff),
                                 fontSize: 15,
@@ -133,19 +183,6 @@ class Login extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 20,
-                      ),
-                      Image(
-                        image: AssetImage('assets/images/line.png'),
-                        width: 170,
-                        height: 1,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Lupa Password Anda ?',
-                        style:
-                            TextStyle(color: Color(0xFF1E282D), fontSize: 15),
                       ),
                     ],
                   ),

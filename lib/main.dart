@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oj_tix/pages/Home.dart';
+import 'package:oj_tix/pages/Login.dart';
+import 'package:oj_tix/pages/Register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Home(),
+        '/login': (context) => const Login(),
+        '/register': (context) => const Register(),
+      },
     );
   }
 }
