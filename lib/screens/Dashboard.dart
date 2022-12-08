@@ -38,7 +38,7 @@ class _DashboardState extends State<Dashboard> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text('Helo Asjang'),
+                        Text('Hallo Asjang'),
                         SizedBox(
                           width: 7.6,
                         ),
