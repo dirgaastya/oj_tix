@@ -1,7 +1,10 @@
+import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gap/gap.dart';
+import 'package:oj_tix/component/BottomBar.dart';
+import 'package:oj_tix/component/SearchBar.dart';
 
 final listImage = [
   "assets/images/Poster1.png",
@@ -20,7 +23,11 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: BotBar(),
+      backgroundColor: Color(0xffFCFCFC),
       body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
           child: Stack(
             children: <Widget>[
@@ -48,6 +55,10 @@ class _DashboardState extends State<Dashboard> {
                   ),
                   SizedBox(
                     height: 15,
+                  ),
+                  SearchBar(),
+                  SizedBox(
+                    height: 25,
                   ),
 
                   // Carousel------------------------------------------------------------------------------
