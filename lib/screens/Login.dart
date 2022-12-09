@@ -119,7 +119,7 @@ class Login extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            // _navigateMainPage(context);
+                            Navigator.pushNamed(context, '/dashboard');
                           },
                           child: Text(
                             "SIGN IN",
